@@ -1,19 +1,19 @@
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
-      <div className="max-w-5xl mx-auto px-6 md:px-10 py-10">
+      <div className="px-6 py-10">
 
         {/* About Section */}
-        <section className="mb-8">
-          <div className="flex gap-6 md:gap-6">
-            <span className="section-label w-24 shrink-0 text-right text-lg font-semibold">
+        <section className="mb-10">
+          <div className="flex gap-10 max-w-3xl mx-auto">
+            <span className="section-label w-28 shrink-0 text-right text-xl font-medium">
               about
             </span>
 
-            <div className="body-text space-y-6 leading-relaxed">
+            <div className="body-text space-y-5 leading-relaxed">
               <p>
                 20 y/o developer passionate about{" "}
-                <b>backend system design</b>, <b>software architecture</b>,{" "}
+                <b>backend system design</b>, <b>software architecture</b>,{" "}s
                 <b>scalability</b>, <b>concurrency</b>, and{" "}
                 <b>distributed systems</b> — with a strong focus on
                 principled architectural trade-offs.
@@ -56,9 +56,9 @@ const Index = () => {
         </section>
 
         {/* Tech / Skills Section */}
-        <section className="mb-8">
-          <div className="flex gap-6 md:gap-6">
-            <span className="section-label w-24 shrink-0 text-right text-lg font-semibold">
+        <section className="mb-10">
+          <div className="flex gap-10 max-w-3xl mx-auto">
+            <span className="section-label w-28 shrink-0 text-right text-xl font-medium">
               techs
             </span>
 
@@ -89,9 +89,9 @@ const Index = () => {
         </section>
 
         {/* Education Section */}
-        <section className="mb-8">
-          <div className="flex gap-6 md:gap-6">
-            <span className="section-label w-24 shrink-0 text-right text-lg font-semibold">
+        <section className="mb-10">
+          <div className="flex gap-10 max-w-3xl mx-auto">
+            <span className="section-label w-28 shrink-0 text-right text-xl font-medium">
               education
             </span>
 
@@ -120,21 +120,18 @@ const Index = () => {
 
         {/* Reach Out Section */}
         <section>
-          <div className="flex gap-6 md:gap-6">
-            <span className="section-label w-24 shrink-0 text-right text-lg font-semibold">
+          <div className="flex gap-10 max-w-3xl mx-auto">
+            <span className="section-label w-28 shrink-0 text-right text-xl font-medium">
               reach out
             </span>
 
-            <div className="body-text space-y-1">
-              <p>
-                <a
-                  href="mailto:sangramofc@gmail.com"
-                  className="subtle-link"
-                >
-                  sangramofc@gmail.com
-                </a>
-              </p>
-
+            <div className="body-text">
+              <a
+                href="mailto:sangramofc@gmail.com"
+                className="subtle-link"
+              >
+                sangramofc@gmail.com
+              </a>
             </div>
           </div>
         </section>
