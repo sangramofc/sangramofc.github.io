@@ -6,44 +6,57 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background overflow-hidden">
       {/* ================= TOP NAV ================= */}
-      <header className="px-6 pt-6 fixed top-0 left-0 w-full bg-background z-50">
-        <nav className="max-w-3xl mx-auto flex flex-wrap gap-5 sm:gap-6 body-text text-sm">
-          <span
-            onClick={() => setActive(0)}
-            className={`cursor-pointer transition-colors ${
-              active === 0 ? "font-medium" : "text-muted-foreground"
-            } hover:text-foreground/80`}
-          >
-            whoami
-          </span>
-          <span
-            onClick={() => setActive(1)}
-            className={`cursor-pointer transition-colors ${
-              active === 1 ? "font-medium" : "text-muted-foreground"
-            } hover:text-foreground/80`}
-          >
-            projects
-          </span>
-          <span
-            onClick={() => setActive(2)}
-            className={`cursor-pointer transition-colors ${
-              active === 2 ? "font-medium" : "text-muted-foreground"
-            } hover:text-foreground/80`}
-          >
-            system-design case studies
-          </span>
-          <span
-            onClick={() => setActive(3)}
-            className={`cursor-pointer transition-colors ${
-              active === 3 ? "font-medium" : "text-muted-foreground"
-            } hover:text-foreground/80`}
-          >
-            blogs
-          </span>
-        </nav>
-        <div className="max-w-5xl mx-auto mt-4 border-t border-border" />
-      </header>
+<header className="px-6 pt-6 fixed top-0 left-0 w-full bg-background z-50">
+  <div className="max-w-5xl mx-auto flex items-center justify-between">
+    {/* Left side - Navigation links */}
+    <nav className="flex flex-wrap gap-5 sm:gap-6 body-text text-sm">
+      <span
+        onClick={() => setActive(0)}
+        className={`cursor-pointer transition-colors ${
+          active === 0 ? "font-medium" : "text-muted-foreground"
+        } hover:text-foreground/80`}
+      >
+        whoami
+      </span>
+      <span
+        onClick={() => setActive(1)}
+        className={`cursor-pointer transition-colors ${
+          active === 1 ? "font-medium" : "text-muted-foreground"
+        } hover:text-foreground/80`}
+      >
+        projects
+      </span>
+      <span
+        onClick={() => setActive(2)}
+        className={`cursor-pointer transition-colors ${
+          active === 2 ? "font-medium" : "text-muted-foreground"
+        } hover:text-foreground/80`}
+      >
+        system-design case studies
+      </span>
+      <span
+        onClick={() => setActive(3)}
+        className={`cursor-pointer transition-colors ${
+          active === 3 ? "font-medium" : "text-muted-foreground"
+        } hover:text-foreground/80`}
+      >
+        blogs
+      </span>
+    </nav>
 
+    {/* Right side - Resume link only */}
+    <a
+      href="https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing"  // ← replace with your actual Google Drive share link
+      target="_blank"
+      rel="noopener noreferrer"
+      className="body-text text-sm font-medium text-foreground hover:text-primary transition-colors px-3 py-1.5 rounded-md hover:bg-muted/50"
+    >
+      resume
+    </a>
+  </div>
+
+  <div className="max-w-5xl mx-auto mt-4 border-t border-border" />
+</header>
       {/* ================= SLIDER – no global paddingTop anymore ================= */}
       <div
         className="transition-transform duration-700 ease-in-out"
@@ -162,12 +175,28 @@ const Index = () => {
           reach out
         </span>
 
-        <div className="body-text">
+        <div className="body-text flex flex-wrap items-center gap-4">
           <a
             href="mailto:sangramofc@gmail.com"
-            className="subtle-link"
+            className="subtle-link hover:underline text-foreground"
           >
             sangramofc@gmail.com
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sangramofc/" // ← replace with your LinkedIn URL
+            target="_blank"
+            rel="noopener noreferrer"
+            className="subtle-link hover:underline text-foreground"
+          >
+            linkedin
+          </a>
+          <a
+            href="https://x.com/sangramofc" // ← replace with your X handle
+            target="_blank"
+            rel="noopener noreferrer"
+            className="subtle-link hover:underline text-foreground"
+          >
+            x
           </a>
         </div>
       </div>
