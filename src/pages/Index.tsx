@@ -5,11 +5,11 @@ const Index = () => {
 
   return (
     <main className="min-h-screen bg-background overflow-hidden">
-      {/* ================= TOP NAV ================= */}
-<header className="px-6 pt-6 fixed top-0 left-0 w-full bg-background z-50">
-  <div className="max-w-5xl mx-auto flex items-center justify-between">
-    {/* Left side - Navigation links */}
-    <nav className="flex flex-wrap gap-5 sm:gap-6 body-text text-sm">
+     {/* ================= TOP NAV ================= */}
+<header className="px-6 pt-6 fixed top-0 left-0 right-0 bg-background z-50">
+  <div className="max-w-5xl mx-auto flex items-center justify-center">
+    {/* Centered nav – no right-side content */}
+    <nav className="flex flex-wrap gap-5 sm:gap-6 body-text text-sm justify-center">
       <span
         onClick={() => setActive(0)}
         className={`cursor-pointer transition-colors ${
@@ -43,16 +43,6 @@ const Index = () => {
         blogs
       </span>
     </nav>
-
-    {/* Right side - Resume link only */}
-    <a
-      href="https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing"  // ← replace with your actual Google Drive share link
-      target="_blank"
-      rel="noopener noreferrer"
-      className="body-text text-sm font-medium text-foreground hover:text-primary transition-colors px-3 py-1.5 rounded-md hover:bg-muted/50"
-    >
-      resume
-    </a>
   </div>
 
   <div className="max-w-5xl mx-auto mt-4 border-t border-border" />
