@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -6,41 +6,39 @@
 
 @layer base {
   :root {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 85%;
+    /* Theme colors (academic dark gray) */
+    --background: 0 0% 14%;
+    --foreground: 0 0% 92%;
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 85%;
+    --card: 0 0% 14%;
+    --card-foreground: 0 0% 92%;
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 85%;
+    --popover: 0 0% 14%;
+    --popover-foreground: 0 0% 92%;
 
-    --primary: 0 0% 85%;
-    --primary-foreground: 0 0% 5%;
+    --primary: 0 0% 92%;
+    --primary-foreground: 0 0% 14%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 85%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 92%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 85%;
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 92%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 85%;
-
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 0 0% 85%;
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
+    --ring: 0 0% 92%;
 
     --radius: 0.5rem;
 
-    /* Custom tokens for portfolio */
-    --text-body: 0 0% 78%;
-    --text-label: 0 0% 65%;
-    --link-color: 0 0% 78%;
-    --link-hover: 0 0% 95%;
+    /* Portfolio tokens */
+    --text-body: 0 0% 88%;
+    --text-label: 0 0% 70%;
+    --link-color: 0 0% 90%;
+    --link-hover: 0 0% 100%;
   }
 }
 
@@ -53,53 +51,62 @@
     scroll-behavior: smooth;
   }
 
+  /* BODY TEXT (matches reference site) */
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-weight: 300;
-    line-height: 1.7;
+    font-family: "CodeNewRoman", Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.9;
     letter-spacing: 0.01em;
   }
 
-  /* Serif heading style for section labels */
+  /* SECTION LABELS — DO NOT CHANGE FONT */
   .section-label {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-style: italic;
-    font-weight: 400;
-    color: hsl(var(--text-label));
-    font-size: 1rem;
-    letter-spacing: 0.02em;
-  }
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
 
-  /* Body text styling */
+  /* smaller + tighter */
+  font-size: 1.0rem;
+
+  color: hsl(var(--text-label));
+  padding-top: -1 rem;
+  letter-spacing: 0;
+opacity: 0.77;
+
+}
+
+
+  /* MAIN BODY CONTENT */
   .body-text {
     color: hsl(var(--text-body));
-    font-size: 0.95rem;
-    line-height: 1.85;
+    font-size: 1.05rem;
+    line-height: 1.9;
   }
 
-  /* Subtle link styling */
+  /* LINKS (research-style underline) */
   .subtle-link {
     color: hsl(var(--link-color));
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
     transition: color 0.2s ease;
   }
 
   .subtle-link:hover {
     color: hsl(var(--link-hover));
-    text-decoration: underline;
-    text-underline-offset: 3px;
   }
 
-  /* Education entry styling */
+  /* EDUCATION */
   .edu-title {
     color: hsl(var(--foreground));
-    font-weight: 400;
-    font-size: 0.95rem;
+    font-weight: 500;
+    font-size: 1rem;
   }
 
   .edu-meta {
     color: hsl(var(--muted-foreground));
-    font-size: 0.875rem;
+    font-size: 0.9rem;
   }
 }
